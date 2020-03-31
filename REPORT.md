@@ -1,10 +1,10 @@
 # 星巴克数据分析项目
 
 ## 项目简介
-理解顾客购买行为，对以提供产品和服务为主要盈利目的大多数企业都是至关重要的。通过对顾客购买行为的分析，可以帮助企业提供更好的产品和服务，进而获取更多的市场竞争优势。那么如何更好的理解顾客的购买行为，一种有效的方式是通过对顾客消费记录进行数据挖掘，使用机器学习的手段，来**发现**数据背后隐藏的信息。
+理解顾客购买行为, 对以提供产品和服务为主要盈利目的大多数企业都是至关重要的. 通过对顾客购买行为的分析, 可以帮助企业提供更好的产品和服务, 进而获取更多的市场竞争优势. 那么如何更好的理解顾客的购买行为, 一种有效的方式是通过对顾客消费记录进行数据挖掘，使用机器学习的手段, 来**发现**数据背后隐藏的信息.
 
 ### 背景
-原始数据是Udacity数据科学家项目提供的。Udacity提供的一些模拟 Starbucks rewards 移动 app 上用户行为的数据。这个数据集是从星巴克 app 的真实数据简化而来。此模拟器仅产生了一种饮品，实际上星巴克的饮品有几十种。一般情况下，每隔几天，星巴克会向 app 的用户发送一些推送。
+原始数据是Udacity数据科学家项目提供的. Udacity提供的一些模拟 Starbucks rewards 移动 app 上用户行为的数据. 这个数据集是从星巴克 app 的真实数据简化而来. 此模拟器仅产生了一种饮品, 实际上星巴克的饮品有几十种. 一般情况下, 每隔几天, 星巴克会向 app 的用户发送一些推送.
 
 ### 数据信息
 1. 推送信息，可能仅仅是一条饮品的广告或者是折扣券或 BOGO（买一送一）。一些顾客可能一连几周都收不到任何推送。每种推送都有有效期。例如，买一送一（BOGO）优惠券推送的有效期可能只有 5 天。你会发现数据集中即使是一些消息型的推送都有有效期，哪怕这些推送仅仅是饮品的广告，例如，如果一条消息型推送的有效期是 7 天，你可以认为是该顾客在这 7 天都可能受到这条推送的影响。
@@ -76,8 +76,10 @@
 性别分布:
 
 所有顾客中，57.2%是男性， 41.3%是女性， 其他是1.43%
+
 <img src="./images/gender.png" alt="gender" width="500">
-男性顾客年龄和消费水平的关系：
+
+年龄和消费水平的关系(男性):
 
 1. 男性顾客随着年龄的增加，对于平均完成推送一定的正向线性关系。
 <img src="./images/male_offer_complete.png" alt="male_offer_complete" width="500">
@@ -85,7 +87,7 @@
 <img src="./images/male_age_amount.png" alt="male_age_amount" width="500">
 <img src="./images/male_age_tnx.png" alt="male_age_tnx" width="500">
 
-女性顾客年龄和消费水平的关系：
+年龄和消费水平的关系(女性):
 
 1. 女性顾客随着年龄的增加，对于平均完成推送相关性不明显。
 <img src="./images/female_offer_complete.png" alt="female_offer_complete" width="500">
@@ -97,7 +99,7 @@
  
 收入水平和消费的关系：
 
-* 收入低于50k以下的男顾客和女顾客在消费量，完成推送交易，购买次数上有显著性。说明这两个组购买行为有明显的不同。
+* 收入低于50k以下的男顾客和女顾客在消费量，完成推送交易，购买次数上有显著性。说明这两个组购买行为有明显的不同。
 
 |特征|t-score|p-value|
 |---|---|---|
@@ -105,7 +107,7 @@
 |`完成推送交易`|11.4290|0.0|
 |`购买次数`|4.2466|1.1115282947171679e-05|
 
-* 收入在50k和75k之间的男顾客和女顾客在消费量，完成推送交易上有显著性。在消费次数上没有显著性。说明此二组在购买次数上相当，在购买量和完成推送上行为不一样。
+* 收入在50k和75k之间的男顾客和女顾客在消费量，完成推送交易上有显著性。在消费次数上没有显著性。说明此二组在购买次数上相当，在购买量和完成推送上行为不一样。
 
 |特征|t-score|p-value|
 |---|---|---|
@@ -122,7 +124,7 @@
 |`购买次数`|-0.6398|0.74|
 
 
-* 收入低于50k的顾客和收入在50k和75k之间顾客在消费量，完成推送交易，存在显著性。在消费次数上都没有显著性。说明此二组在购买次数上类似，但在花费和完成推送交易上不同。
+* 收入低于50k的顾客和收入在50k和75k之间顾客在消费量，完成推送交易，存在显著性。在消费次数上都没有显著性。说明此二组在购买次数上类似，但在花费和完成推送交易上不同。
 
 |特征|t-score|p-value|
 |---|---|---|
@@ -130,7 +132,7 @@
 |`完成推送交易`|17.9547|0.0|
 |`购买次数`|-11.1395|1.0|
 
-* 收入低于50k的顾客和收入高于75k的顾客在消费量，完成推送交易，存在显著性。在消费次数上都没有显著性。说明此二组在购买次数上类似，但在花费和完成推送交易上不同。
+* 收入低于50k的顾客和收入高于75k的顾客在消费量，完成推送交易，存在显著性。在消费次数上都没有显著性。说明此二组在购买次数上类似，但在花费和完成推送交易上不同。
 
 |特征|t-score|p-value|
 |---|---|---|
@@ -138,7 +140,7 @@
 |`完成推送交易`|34.3149|0.0|
 |`购买次数`|-35.4485|1.0|
 
-* 收入在50k和75k之间顾客和收入高于75k的顾客在消费量，完成推送交易，不存在显著性。在消费次数上有显著性。说明此二组在购买次数上不同，但在花费和完成推送交易上类似。
+* 收入在50k和75k之间顾客和收入高于75k的顾客在消费量，完成推送交易，不存在显著性。在消费次数上有显著性。说明此二组在购买次数上不同，但在花费和完成推送交易上类似。
 
 |特征|t-score|p-value|
 |---|---|---|
@@ -162,25 +164,25 @@
 |`offer completed                 `    |推送完成总计|
 |`offer received                  `    |收到推送总计|
 |`offer viewed                    `    |查看推送总计|
-|`transaction                      `   |交易总计|
-|`bogo_1_received                  `   |收到买一送一1总计|
-|`bogo_1_viewed                    `   |查看买一送一1总计|
+|`transaction                      `   |交易总计|
+|`bogo_1_received                  `   |收到买一送一1总计|
+|`bogo_1_viewed                    `   |查看买一送一1总计|
 |`bogo_1_completed                 `   |完成买一送一1总计|
-|`bogo_2_received                  `   |收到买一送一2总计|
+|`bogo_2_received                  `   |收到买一送一2总计|
 |`bogo_2_viewed                    `   |查看买一送一2总计|
-|`bogo_2_completed                 `   |完成买一送一2总计|
+|`bogo_2_completed                 `   |完成买一送一2总计|
 |`informational_1_received         `   |收到信息推送1总计|
 |`informational_1_viewed           `   |查看信息推送1总计|
-|`bogo_3_received                  `   |收到买一送一3总计|
+|`bogo_3_received                  `   |收到买一送一3总计|
 |`bogo_3_viewed                    `   |查看买一送一3总计|
-|`bogo_3_completed                 `   |完成买一送一3总计|
-|`discount_1_received              `   |收到折扣1总计|
+|`bogo_3_completed                 `   |完成买一送一3总计|
+|`discount_1_received              `   |收到折扣1总计|
 |`discount_1_viewed                `   |查看折扣1总计|
 |`discount_1_completed             `   |完成折扣1总计|
-|`discount_2_received              `   |收到折扣2总计|
+|`discount_2_received              `   |收到折扣2总计|
 |`discount_2_viewed                `   |查看折扣2总计|
 |`discount_2_completed             `   |完成折扣2总计|
-|`discount_3_received              `   |收到折扣3总计|
+|`discount_3_received              `   |收到折扣3总计|
 |`discount_3_viewed                `   |查看折扣3总计|
 |`discount_3_completed             `   |完成折扣3总计|
 |`informational_2_received         `   |收到信息推送2总计|
@@ -188,54 +190,55 @@
 |`bogo_4_received                  `   |收到买一送一4总计|
 |`bogo_4_viewed                    `   |查看买一送一4总计|
 |`bogo_4_completed                 `   |完成买一送一4总计|
-|`discount_4_received              `   |收到折扣4总计|
+|`discount_4_received              `   |收到折扣4总计|
 |`discount_4_viewed                `   |查看折扣4总计|
 |`discount_4_completed             `   |完成折扣4总计|
-|`bogo_received                    `   |收到所有4种买一送一总计|
+|`bogo_received                    `   |收到所有4种买一送一总计|
 |`bogo_viewed                      `   |查看所有4种买一送一总计|
 |`bogo_completed                   `   |完成所有4种买一送一总计|
-|`discount_received                `   |收到所有4种折扣总计|
+|`discount_received                `   |收到所有4种折扣总计|
 |`discount_viewed                  `   |查看所有4种折扣总计|
 |`discount_completed               `   |完成所有4种折扣总计|
 |`informational_received           `   |收到所有2种信息推送总计|
 |`informational_viewed             `   |查看所有2种信息推送总计|
-|`transaction_completed_ratio      `   |交易次数与推送完成比|
-|`offer_viewed_rate                `   |查看推送与收到推送比|
+|`transaction_completed_ratio      `   |交易次数与推送完成比|
+|`offer_viewed_rate                `   |查看推送与收到推送比|
 |`offer_completed_received_rate    `   |完成推送与收到推送比|
-|`offer_completed_viewed_rate      `   |完成推送与查看推送比|
+|`offer_completed_viewed_rate      `   |完成推送与查看推送比|
 |`bogo_viewed_rate                 `   |所有买一送一查看与收到比|
-|`bogo_completed_received_rate     `   |所有买一送一完成与收到比|
+|`bogo_completed_received_rate     `   |所有买一送一完成与收到比|
 |`bogo_completed_viewed_rate       `   |所有买一送一完成与查看比|
 |`discount_viewed_rate             `   |所有折扣查看与收到比|
-|`discount_completed_received_rate`   |所有折扣完成与收到比|
+|`discount_completed_received_rate`   |所有折扣完成与收到比|
 |`discount_completed_viewed_rate  `   |所有折扣完成与查看比|
-|`informational_viewed_rate       `   |信息查看与收到比|
-|`F                               `   |女性one-hot|
+|`informational_viewed_rate       `   |信息查看与收到比|
+|`F                               `   |女性one-hot|
 |`M                               `   |男性one-hot|
-|`O                               `   |其他性别|
+|`O                               `   |性别其他|
 
 
 # 机器学习建模
 ## PCA降维
-通过PCA帮助理解数据：
-前30个PCA Components可以解释原始数据97%的变异数
+通过PCA帮助理解数据：
+
+前30个PCA Components可以解释原始数据97%的变异数
 <img src="./images/pca.png" alt="pca" width="500">
 
-### 前3个Components的特征权重
+### 前3个PCA Components的特征权重
 <img src="./images/pca1.png" alt="First_component" width="500">
 <img src="./images/pca2.png" alt="Second_component" width="500">
 <img src="./images/pca3.png" alt="Third_component" width="500">
 
 ## 无监督学习 - KMeans Clustering
 ### Sihouette分数
-Silhouette数值度量组内样本，与组间样本相比的紧密程度。It is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The Silhouette Coefficient for a sample is (b - a) / max(a, b). 值越大越好。
+Silhouette数值度量组内样本，与组间样本相比的紧密程度。It is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The Silhouette Coefficient for a sample is (b - a) / max(a, b). 值越大越好。
 
 ### Inertia指标
-Inertia度量所有组内样本与组中心的距离。
+Inertia度量所有组内样本与组中心的距离。
 Inertia calculates the sum of distances of all the points within a cluster from the centroid of that cluster. 值越小越好。
 
 ### 如何决定K值
-如图所示，通过计算不同K-Means聚类的Sihouette分数和Inertia指标，K=13比较理想。
+如图所示，通过计算不同K-Means聚类的Sihouette分数和Inertia指标，K=13比较理想。
 <img src="./images/sihouette.png" alt="k_value" width="500">
 
 ## 监督学习 - 预测推送完成比率
@@ -256,6 +259,7 @@ Inertia calculates the sum of distances of all the points within a cluster from 
 顾客聚类分析结果：
 
 10 推送概览：
+
 <img src="./images/10_offers.png" alt="10_offers" width="500">
 
 一般情况：
@@ -355,12 +359,12 @@ Inertia calculates the sum of distances of all the points within a cluster from 
 
 
 # 回顾与总结
-1. Pandas Dataframe使用技巧在数据处理中有所提高。
+1. Pandas Dataframe使用技巧在数据处理中有所提高。
 2. 深入了解了PCA和K-Means聚类结合来发现数据背后的真相。
-3. 更好的理解聚类算法，加深对评价指标的了解。
+3. 更好的理解聚类算法，加深对评价指标的了解。
 
 # 感谢
-感谢Udacity提供的如此精心设计的学习项目。谢谢。
+感谢Udacity提供的精心设计的学习项目。谢谢。
 
 # References
 1. [Sklearn Cluster](https://scikit-learn.org/stable/modules/clustering.html) 
