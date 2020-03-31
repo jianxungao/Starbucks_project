@@ -73,7 +73,7 @@
 3. 其中女性顾客平均年龄57岁，中位数是58岁，最小18岁，最大101岁，标准差16.88。
 <img src="./images/age_dist.png" alt="age" width="500">
 
-性别分布:
+性别分布:
 
 所有顾客中，57.2%是男性， 41.3%是女性， 其他是1.43%
 
@@ -214,7 +214,7 @@
 |`informational_viewed_rate       `   |信息查看与收到比|
 |`F                               `   |女性one-hot|
 |`M                               `   |男性one-hot|
-|`O                               `   |性别其他|
+|`O                               `   |性别其他|
 
 
 # 机器学习建模
@@ -231,7 +231,7 @@
 
 ## 无监督学习 - KMeans Clustering
 ### Sihouette分数
-Silhouette数值度量组内样本，与组间样本相比的紧密程度。It is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The Silhouette Coefficient for a sample is (b - a) / max(a, b). 值越大越好。
+Silhouette数值度量组内样本，与组间样本相比的紧密程度。It is calculated using the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The Silhouette Coefficient for a sample is (b - a) / max(a, b). 值越大越好。
 
 ### Inertia指标
 Inertia度量所有组内样本与组中心的距离。
@@ -364,7 +364,7 @@ Inertia calculates the sum of distances of all the points within a cluster from 
 3. 更好的理解聚类算法，加深对评价指标的了解。
 
 # 感谢
-感谢Udacity提供的精心设计的学习项目。谢谢。
+感谢Udacity提供的精心设计的学习项目。谢谢。
 
 # References
 1. [Sklearn Cluster](https://scikit-learn.org/stable/modules/clustering.html) 
