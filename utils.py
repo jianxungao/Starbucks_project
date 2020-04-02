@@ -1,5 +1,5 @@
 '''
-Help functions for this project
+Helper functions for this project
 
 '''
 import pandas as pd
@@ -54,7 +54,7 @@ def proc_offer_status(df, offers):
          10 offers names
 
     Descriptions:
-    process each every one offers for all records by a customer
+    process each every offer for all records by a customer
     the order of offer status list as [received, viewed, completed]
     '''
 
@@ -141,7 +141,7 @@ def proc_offers_and_extends(col, df):
             d2 = proc_offer_status(df_tmp, OFFER_NAMES)
             d3 = proc_offer_status(df_tmp1, OFFER_TYPES)
         else:
-            # no any offer respons
+            # no any offer response
             for offer in OFFER_NAMES:
                 d2[offer] = 0
             for offer in OFFER_TYPES:
