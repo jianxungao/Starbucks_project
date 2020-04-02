@@ -10,11 +10,11 @@
 |__README.md
 |__REPORT.md
 |__Starbucks_Capstone_notebook-zh.ipynb
-|__util.py
+|__utils.py
 
 ```
 * `Starbucks_Capstone_notebook-zh.ipynb`: 项目的主要内容
-* `util.py`: 所有辅助的函数
+* `utils.py`: 所有辅助的函数
 * `REPORT.md`: 项目报告
 
 
