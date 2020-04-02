@@ -26,6 +26,9 @@
     * `seaborn`
     * `pandas`
     * `numpy`
+    * `sklearn`
+    * `tensorflow`
+    
 * 数据集:
     * `portfolio.json`
     * `profile.json`
